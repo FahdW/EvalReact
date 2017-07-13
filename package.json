@@ -7,11 +7,15 @@
     "bootstrap-sass": "^3.3.7",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
+    "jquery-ui-bundle": "^1.12.1",
+    "moment": "^2.18.1",
     "node-sass-chokidar": "0.0.3",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
-    "react-slick": "^0.14.11"
+    "react-slick": "^0.14.11",
+    "react-twitter-widgets": "^1.4.0",
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.10"

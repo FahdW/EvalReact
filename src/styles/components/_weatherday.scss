@@ -1,0 +1,17 @@
+.weather-high {
+  margin-bottom: 0;
+}
+
+.weather-day {
+  font-weight: bold;
+}
+
+.weather-container {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .weather-img {
+    height: 4rem;
+  }
+}

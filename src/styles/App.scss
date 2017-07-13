@@ -3,4 +3,19 @@
 // Components
 @import 'components/header';
 @import 'components/hero';
-@import 'components/paragraph-title';
+@import 'components/paragraph-header';
+@import 'components/paragraph-image';
+@import 'components/carousel-paragraph';
+@import 'components/carousel';
+@import 'components/weatherbar';
+@import 'components/weatherday';
+@import 'components/calendar';
+@import 'components/footer';
+@import 'components/swan-long';
+@import 'components/twitter-feed';
+@import 'components/indent-paragraph';
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@import "~bootstrap/dist/css/bootstrap.min.css"

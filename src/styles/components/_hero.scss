@@ -2,12 +2,18 @@
   background-image: url("../img/main-image.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 40vh;
+  height: 70vh;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
   .hero-image {
     height: 30vh;
+  }
+}
+
+@media(min-width:769px) and (max-width:1025px) {
+  .hero-image {
+    height: 50vh;
   }
 }

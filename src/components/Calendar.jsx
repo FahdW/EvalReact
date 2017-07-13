@@ -1,15 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import $ from 'jquery';
 
 export default class Calendar extends Component {
   componentDidMount() {
     $('#calendar').datepicker({
-      changeMonth: true,
-      changeYear: true
+      dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+      showOtherMonths: true,
+      showMonthAfterYear: false
     });
-  } 
+  }
 
-  render () {
+  render() {
     return (
       <div id="calendar"></div>
     );

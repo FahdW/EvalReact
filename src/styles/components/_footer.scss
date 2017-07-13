@@ -1,0 +1,26 @@
+.footer {
+  background-color: #002341;
+  height: 10rem;
+}
+
+.footer__text {
+  padding-top: 3rem;
+  color: white;
+}
+
+.footer__url {
+  padding-right: 2rem;
+  text-decoration: underline;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer__text {
+    margin-top: 1rem;
+    font-size: 12px;
+  }
+
+  .footer__url {
+    font-size: 10px;
+  }
+}

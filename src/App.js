@@ -1,29 +1,24 @@
+// var $ = require("jquery-ui");
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './styles/App.css';
 import { Grid, Row, Col, Nav, NavItem } from 'react-bootstrap';
 import $ from 'jquery';
+import 'jquery-ui-bundle';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Calendar from './components/Calendar';
 import WeatherBar from './components/WeatherBar';
 import Carousel from './components/Carousel';
+import TwitterFeed from './components/TwitterFeed';
+import Footer from './components/Footer';
 
 import SwanLong from './img/swan-long.png';
+import SwanLarge from './img/swan-large.png';
 
 class App extends Component {
-  componentDidMount() {
-    // $('.datepicker').datepicker({
-    //   changeMonth: true,
-    //   changeYear: true,
-    //   showButtonPanel: true,
-    //   yearRange: "-116:+34",
-    //   dateFormat: 'dd/mm/yy'
-    // });
-  }
-
   render() {
     return (
       <div className="App">
@@ -32,14 +27,15 @@ class App extends Component {
         <Grid>
           <Row>
             <Col xs={12} md={6}>
-              <h3 className="paragraph-title">Header</h3>
+              <h3 className="paragraph-header">Header</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
                   amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. Donec urna neque, vestibulum
                   non eleifend sit amet, fermentum in ante. Donec vulputate nisl in sem hendrerit maximus. Donec vitae varius massa.
                   Donec ultricies elementum ligula, ac semper metus accumsan sed.</p>
+                <img className="img-responsive paragraph-image" src={SwanLarge} />
             </Col>
             <Col xs={12} md={6}>
-              <div className="datepicker"></div>
+              <Calendar />
             </Col>
           </Row>
           <Row>
@@ -47,10 +43,10 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={1}>
-              <img src={SwanLong} />
+              <img className="swan-long" src={SwanLong} />
             </Col>
             <Col xs={9} sm={5}>
-              <p id="indent-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
+              <p className="indent-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
           amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. </p>
             </Col>
             <Col xs={12} sm={5}>
@@ -58,9 +54,9 @@ class App extends Component {
           amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="carousel-paragraph">
             <Col xs={12}>
-              <h3>Header</h3>
+              <h3 className="paragraph-header">Header</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
           amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. Donec urna neque, vestibulum
           non eleifend sit amet, fermentum in ante. Donec vulputate nisl in sem hendrerit maximus. Donec vitae varius massa.
@@ -73,7 +69,31 @@ class App extends Component {
           <Row>
             <Carousel />
           </Row>
+          <Row className="twitter-feed">
+            <Col xs={12} sm={6}>
+              <Col xs={12}>
+                <h3 className="paragraph-header">Header</h3>
+                <img className="img-responsive paragraph-image" src={SwanLarge} />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
+                    amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. Donec urna neque,
+                    vestibulum non eleifend sit amet, fermentum in ante. Donec vulputate nisl in sem hendrerit maximus. Donec vitae
+                    varius massa. Donec ultricies elementum ligula, ac semper metus accumsan sed.</p>
+              </Col>
+              <Col xs={12}>
+                <h3 className="paragraph-header">Header</h3>
+                <img className="img-responsive paragraph-image" src={SwanLarge} />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
+                    amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. Donec urna neque,
+                    vestibulum non eleifend sit amet, fermentum in ante. Donec vulputate nisl in sem hendrerit maximus. Donec vitae
+                    varius massa. Donec ultricies elementum ligula, ac semper metus accumsan sed.</p>              
+              </Col>
+            </Col>
+            <Col xs={12} sm={6}>
+              <TwitterFeed />
+            </Col>
+          </Row>
         </Grid>
+        <Footer />
       </div>
     );
   }

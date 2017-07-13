@@ -1,16 +1,83 @@
-import React, {Component} from 'react';
-var Slider = require('react-slick');
+import React, { Component } from 'react';
+import Slider from 'react-slick';
+import SwanCarousel from '../img/swan-carousel.png';
+
+function NextArrow(props) {
+  const {className, style, onClick} = props
+  return (
+    <div
+      className={className}
+      style={{...style, display: 'block', borderRadius: '25px', background: '#002341'}}
+      onClick={onClick}
+    ></div>
+  );
+}
+
+function PrevArrow(props) {
+  const {className, style, onClick} = props
+  return (
+    <div
+      className={className}
+      style={{...style, display: 'block', borderRadius: '25px', background: '#002341'}}
+      onClick={onClick}
+    ></div>
+  );
+}
 
 export default class Carousel extends Component {
-  render () {
+  render() {
+    var settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
+    };
     return (
-      <Slider>
-        <div><h3>1</h3></div>
-        <div><h3>2</h3></div>
-        <div><h3>3</h3></div>
-        <div><h3>4</h3></div>
-        <div><h3>5</h3></div>
-        <div><h3>6</h3></div>
+      <Slider className="carousel" {...settings}>
+        <div>
+          <img className="center-block carousel__img" src={SwanCarousel} />
+          <div className="text-center carousel__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div>
+          <img className="center-block carousel__img" src={SwanCarousel} />
+          <div className="text-center carousel__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div>
+          <img className="center-block carousel__img" src={SwanCarousel} />
+          <div className="text-center carousel__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div>
+          <img className="center-block carousel__img" src={SwanCarousel} />
+          <div className="text-center carousel__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div>
+          <img className="center-block carousel__img" src={SwanCarousel} />
+          <div className="text-center carousel__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div>
+          <img className="center-block carousel__img" src={SwanCarousel} />
+          <div className="text-center carousel__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div>
+          <img className="center-block carousel__img" src={SwanCarousel} />
+          <div className="text-center carousel__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
       </Slider>
     );
   }
