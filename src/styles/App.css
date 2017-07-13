@@ -1,0 +1,21 @@
+.header {
+  background-image: url("../img/banner.png");
+  background-color: #002341;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 15vh;
+  margin-bottom: 0; }
+
+.hero-image {
+  background-image: url("../img/main-image.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40vh;
+  margin-bottom: 1rem; }
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 30vh; } }
+
+.paragraph-title {
+  margin-bottom: 0; }
