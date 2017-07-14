@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Row, Col, Nav, NavItem} from 'react-bootstrap';
 import WeatherDay from './WeatherDay';
-import Sun from '../img/sun.png';
 import moment from 'moment';
 import $ from 'jquery';
 
@@ -15,10 +14,8 @@ export default class WeatherBar extends Component {
 
   getWeather = () => {
     let currentDay = moment().format('dddd');
-    console.log(currentDay);
     let weather, day=0;
     let that = this;
-    console.log(this.state);
     $.ajax({
       url: "http://api.openweathermap.org/data/2.5/forecast/daily?q=Toronto&mode=json&units=metric&cnt=12&appid=581c8e26bf8c5f212eb94e864c4f59d9",
       success: function (result) {
@@ -27,7 +24,7 @@ export default class WeatherBar extends Component {
         let weatherday = {};
         weatherday.low = Math.round(weather.temp.min);
         weatherday.high = Math.round(weather.temp.max);
-        weatherday.day = day == 0 ? 'Today' : currentDay;      
+        weatherday.day = day === 0 ? 'Today' : currentDay;      
         that.setState({weather: [...that.state.weather, weatherday]});
         currentDay = moment(currentDay, 'ddd').add(1, 'days').format('ddd');
         day++;
@@ -42,13 +39,13 @@ export default class WeatherBar extends Component {
 
   render() {
     let renderWeather = () => {
-      return this.state.weather.map((weather) => {
+      return this.state.weather.map((weather, index) => {
         return (
-          <WeatherDay {...weather} />
+          <WeatherDay key={index} {...weather} />
         );
       });
     }
-    
+
     return (
       <div className="container weather-navbar">
       <Nav bsStyle="tabs">

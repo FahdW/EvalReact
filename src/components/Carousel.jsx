@@ -37,43 +37,43 @@ export default class Carousel extends Component {
     return (
       <Slider className="carousel" {...settings}>
         <div>
-          <img className="center-block carousel__img" src={SwanCarousel} />
+          <img className="center-block carousel__img" alt="swan-carousel" src={SwanCarousel} />
           <div className="text-center carousel__caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div>
-          <img className="center-block carousel__img" src={SwanCarousel} />
+          <img className="center-block carousel__img" alt="swan-carousel" src={SwanCarousel} />
           <div className="text-center carousel__caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div>
-          <img className="center-block carousel__img" src={SwanCarousel} />
+          <img className="center-block carousel__img" alt="swan-carousel" src={SwanCarousel} />
           <div className="text-center carousel__caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div>
-          <img className="center-block carousel__img" src={SwanCarousel} />
+          <img className="center-block carousel__img" alt="swan-carousel" src={SwanCarousel} />
           <div className="text-center carousel__caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div>
-          <img className="center-block carousel__img" src={SwanCarousel} />
+          <img className="center-block carousel__img" alt="swan-carousel" src={SwanCarousel} />
           <div className="text-center carousel__caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div>
-          <img className="center-block carousel__img" src={SwanCarousel} />
+          <img className="center-block carousel__img" alt="swan-carousel" src={SwanCarousel} />
           <div className="text-center carousel__caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div>
-          <img className="center-block carousel__img" src={SwanCarousel} />
+          <img className="center-block carousel__img" alt="swan-carousel" src={SwanCarousel} />
           <div className="text-center carousel__caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>

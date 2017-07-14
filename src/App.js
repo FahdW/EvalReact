@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './styles/App.css';
-import { Grid, Row, Col, Nav, NavItem } from 'react-bootstrap';
-import $ from 'jquery';
+import { Grid, Row, Col} from 'react-bootstrap';
 import 'jquery-ui-bundle';
 
 import Header from './components/Header';
@@ -32,7 +31,7 @@ class App extends Component {
                   amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. Donec urna neque, vestibulum
                   non eleifend sit amet, fermentum in ante. Donec vulputate nisl in sem hendrerit maximus. Donec vitae varius massa.
                   Donec ultricies elementum ligula, ac semper metus accumsan sed.</p>
-                <img className="img-responsive paragraph-image" src={SwanLarge} />
+                <img className="img-responsive paragraph-image" alt="swan-large" src={SwanLarge} />
             </Col>
             <Col xs={12} md={6}>
               <Calendar />
@@ -43,7 +42,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={1}>
-              <img className="swan-long" src={SwanLong} />
+              <img className="swan-long" alt="swan-large" src={SwanLong} />
             </Col>
             <Col xs={9} sm={5}>
               <p className="indent-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
@@ -73,7 +72,7 @@ class App extends Component {
             <Col xs={12} sm={6}>
               <Col xs={12}>
                 <h3 className="paragraph-header">Header</h3>
-                <img className="img-responsive paragraph-image" src={SwanLarge} />
+                <img className="img-responsive paragraph-image" alt="swan-large" src={SwanLarge} />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
                     amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. Donec urna neque,
                     vestibulum non eleifend sit amet, fermentum in ante. Donec vulputate nisl in sem hendrerit maximus. Donec vitae
@@ -81,7 +80,7 @@ class App extends Component {
               </Col>
               <Col xs={12}>
                 <h3 className="paragraph-header">Header</h3>
-                <img className="img-responsive paragraph-image" src={SwanLarge} />
+                <img className="img-responsive paragraph-image" alt="swan-large" src={SwanLarge} />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa eget arcu pulvinar placerat. Ut sit
                     amet mauris mauris. Donec sem turpis, pretium at eros venenatis, imperdiet interdum tortor. Donec urna neque,
                     vestibulum non eleifend sit amet, fermentum in ante. Donec vulputate nisl in sem hendrerit maximus. Donec vitae
