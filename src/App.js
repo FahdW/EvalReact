@@ -1,9 +1,6 @@
-// var $ = require("jquery-ui");
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 import './styles/App.css';
-import { Grid, Row, Col} from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 import 'jquery-ui-bundle';
 
 import Header from './components/Header';
@@ -18,7 +15,7 @@ import SwanLong from './img/swan-long.png';
 import SwanLarge from './img/swan-large.png';
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
         <Header />
