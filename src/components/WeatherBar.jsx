@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {Row, Col, Nav, NavItem} from 'react-bootstrap';
 import WeatherDay from './WeatherDay';
 import moment from 'moment';
-import $ from 'jquery';
+import axios from 'axios';
+
+const requestUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=Toronto&mode=json&units=metric&cnt=12&appid=581c8e26bf8c5f212eb94e864c4f59d9';
 
 export default class WeatherBar extends Component {
   constructor(props) {
@@ -16,21 +18,18 @@ export default class WeatherBar extends Component {
     let currentDay = moment().format('dddd');
     let weather, day=0;
     let that = this;
-    $.ajax({
-      url: "http://api.openweathermap.org/data/2.5/forecast/daily?q=Toronto&mode=json&units=metric&cnt=12&appid=581c8e26bf8c5f212eb94e864c4f59d9",
-      success: function (result) {
-      weather = result.list;
+    axios.get(requestUrl).then((res) => {
+      weather = res.data.list;
       weather.forEach((weather) => {
-        let weatherday = {};
-        weatherday.low = Math.round(weather.temp.min);
-        weatherday.high = Math.round(weather.temp.max);
-        weatherday.day = day === 0 ? 'Today' : currentDay;      
-        that.setState({weather: [...that.state.weather, weatherday]});
+        let weatherDay = {};
+        weatherDay.low = Math.round(weather.temp.min);
+        weatherDay.high = Math.round(weather.temp.max);
+        weatherDay.day = day === 0 ? 'Today' : currentDay;      
+        that.setState({weather: [...that.state.weather, weatherDay]});
         currentDay = moment(currentDay, 'ddd').add(1, 'days').format('ddd');
         day++;
       });
-    }
-  });
+    }).catch((err) => console.log(err));
   }
 
   componentDidMount () {
